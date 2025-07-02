@@ -1,36 +1,31 @@
-table {
-    color: #fff;
-    text-align: center;
-    border-collapse: collapse;
-    font: normal 3em Arial, Helvetica, sans-serif;
+h1{
+    color: pink;
+    font-family:  sans-serif;
 }
 
-tr {
-    height: 16.02vh;
-    background-color: #4e494d;
+p{
+    color:crimson;
+    font-family: fantasy;
 }
 
-td {
-    width: 25vw;
-    border: 1px solid #4e494d;
-    cursor: pointer;
+ul{
+    list-style-image: url('images/pointer-icon.png') ;
 }
 
-#inputBox {
-    background-color: #4e494d;
-    text-align: right;
-    width: 100%;
-    font-size: 2em;
-    color: #fff;
-    border: 0px;
-    pointer-events: none;
+ol{
+    list-style-type: upper-roman;
 }
 
-.digitButton {
-    background-color: #807e80;
+#menu-bar a{
+
+    text-decoration: Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: aquamarine;
+    padding: 5px;
+
 }
 
-.operatorButton {
-    background-color: #ff9e06;
+#menu-bar a:hover{
+    background-color: aqua;
+    color: #ffffff;
 }
-

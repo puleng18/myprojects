@@ -1,87 +1,28 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="style.css" >
+
     </head>
     <body>
-        <table border="1">
-            <tr>
-                <td colspan="4">
-                    <input type="text" id="inputBox" value="0"/>
-                </td>
-            </tr>
-            <tr>
-                <td class="digitButton" onclick="digitBtnPressed('7')">7</td>
-                <td class="digitButton" onclick="digitBtnPressed('8')">8</td>
-                <td class="digitButton" onclick="digitBtnPressed('9')">9</td>
-                <td class="operatorButton" onclick="digitBtnPressed('x')">x</td>
-            </tr>
-            <tr>
-                <td class="digitButton" onclick="digitBtnPressed('4')">4</td>
-                <td class="digitButton" onclick="digitBtnPressed('5')">5</td>
-                <td class="digitButton" onclick="digitBtnPressed('6')">6</td>
-                <td class="operatorButton" onclick="digitBtnPressed('-')">-</td>
-            </tr>
-            <tr>
-                <td class="digitButton" onclick="digitBtnPressed('1')">1</td>
-                <td class="digitButton" onclick="digitBtnPressed('2')">2</td>
-                <td class="digitButton" onclick="digitBtnPressed('3')">3</td>
-                <td class="operatorButton" onclick="digitBtnPressed('+')">+</td>
-            </tr>
-            <tr>
-                <td colspan="2" class="digitButton" onclick="digitBtnPressed('0')">0</td>
-                <td class="operatorButton" onclick="btnACPressed()">AC</td>
-                <td class="operatorButton" onclick="digitBtnPressed('/')">/</td>
-            </tr>
-            <tr>
-                <td colspan="4" onclick="digitBtnPressed('=')">=</td>
-            </tr>
-        </table>
-        <script>
-            // Store the current input and last operator
-            let currentInput = "";
-            let lastOperator = "";
-            let resultDisplayed = false;
+        <h1>Home page</h1>
+       <h2>This is a heading</h2>
+       <h3>This is a heading</h3>
+       <h4>This is a heading</h4>
+       <h5>This is a heading</h5>
+       <h1>This is a heading</h1>
+        <p>Hello everyone</p>
+        <p>SO excited!</p>
+        <a href="lily.html"><img src="images/lilys.jpg"  height="120"/></a> 
+        <img src="images/pink 2.jpg" width="180"/>
+        <img src="images/pink 3.jpg" height="150"/>
+        <img src="images/pink.jpg" height="150"/>
+        <img src="images/white.jpg" width="160"/>
+        <img src="images/yellow.jpg" height="120"/>
+        <img src="images/rose.jpg" height="120"/>
 
-            // Handles digit and operator button presses
-            function digitBtnPressed(button) {
-                let inputBox = document.getElementById("inputBox");
-                let currentValue = inputBox.value;
-
-                // If result is displayed and a digit is pressed, start new input
-                if (resultDisplayed && !isNaN(button)) {
-                    currentValue = "";
-                    resultDisplayed = false;
-                }
-
-                // If '=' is pressed, evaluate the expression
-                if (button === "=") {
-                    // Replace 'x' with '*' for multiplication
-                    let expression = currentValue.replace(/x/g, "*");
-                    try {
-                        // Evaluate the expression and display result
-                        let result = eval(expression);
-                        inputBox.value = result;
-                        resultDisplayed = true;
-                    } catch (e) {
-                        inputBox.value = "Error";
-                        resultDisplayed = true;
-                    }
-                } else {
-                    // Prevent multiple operators in a row
-                    if (["+", "-", "x", "/"].includes(button) && ["+", "-", "x", "/"].includes(currentValue.slice(-1))) {
-                        inputBox.value = currentValue.slice(0, -1) + button;
-                    } else {
-                        // If current value is '0', replace it
-                        inputBox.value = currentValue === "0" ? button : currentValue + button;
-                    }
-                }
-            }
-
-            // Handles the AC (All Clear) button
-            function btnACPressed() {
-                document.getElementById("inputBox").value = "0";
-                resultDisplayed = false;
-            }
-        </script>
+        <a href="https://www.google.co.za">click here to go to google</a>
+        <a href="https://www.pkmweb.com">click here to go to pkmweb</a>
+        <a href="about.html">about us</a>
     </body>
 </html>
